@@ -1,0 +1,72 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.todo{
+    background-color: rgb(6, 6, 44);
+}
+
+.barraprincipal{
+    text-align: center;
+    margin: 15px;
+    padding: 12px;
+    color: rgb(246, 255, 123);
+}
+
+.bba{
+    margin: 55px;
+    font-size: 25px;
+}
+
+.contener{
+    text-align: start;
+    text-decoration: dotted;
+    background-color: rgb(247, 247, 156);
+    color: rgb(6, 6, 36);
+    font-size: 20px;
+    padding: 12px;
+}
+
+.tener{
+    text-align: start;
+    background-color: rgb(252, 237, 109);
+    color: rgb(6, 6, 37);
+    font-size: 20px;
+    padding: 12px;
+}
+
+.iframe{
+    text-align: center;
+    background-color: rgb(16, 49, 49);
+    color: darkorange;
+    padding: 110px;
+    margin: 20px;
+    border: 10px solid yellow;
+}
+
+.divide{
+    text-align: start;
+    background-color:rgb(252, 237, 109);
+    font-size: 20px;
+    padding: 15px;
+    margin: 0px;
+}
+
+.footer{
+    padding: 35px;
+    font-size: 20px;
+    color: rgb(255, 255, 93);
+    background-color: rgb(6, 6, 44);
+}
+
+.defino{
+    padding: 10px;
+    border: 4px solid black;
+}
+
+#fin{
+    text-align: end;
+}
