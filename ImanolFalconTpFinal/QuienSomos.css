@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+}
+
+#parteHead{
+    margin: 0px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: blue;
+    font-size: 35;
+    font-family: serif;
+}
+
+.parteMain{
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    padding: 100px;
+    background-color: blue;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(39, 0, 0, 0.829)
+    )
+    ,url("Imagen/icono.jpg");
+}
+
+.nosotros{
+    font-size: 25px;
+    color: white;
+    font-family: arial;
+    box-shadow: 1px 1px 1px rgba(16, 0, 46, 0.836);
+
+}
+
+.seccionRedes{
+    display: flex;
+    justify-content: center;
+    padding: 45px;
+}
+
+.link{
+    margin: 67px;
+}
+

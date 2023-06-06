@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Logica/log.js"></script>
+    <link rel="stylesheet" href="registro.css">
+    <title>Registrarse</title>
+</head>
+<body>
+    <section>
+        <div class="FormPrin">
+            <div class="for">
+                <form class="formulario">
+                        <label for="mail">
+                            <span class="mt-1">Correo Electrónico</span>
+                            <input type="text" class="mt-2" id="mail" name="mail">
+                            <span class="error" aria-live="polite"></span>
+                        </label><br><br>
+                        <label class="mt-1" for="nameText">Ingresar Nombre</label>
+                        <input class="mt-2" type="text" name="nombre"><br><br>
+                        <label class="mt-1" for="nameText">Ingresar Apellido</label><br>
+                        <input class="mt-2" type="text" name="apellido"><br><br>
+                        <button id="botonForm" class="mt-3" type="submit">Enviar</button><br>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+
+        const form = document.getElementsByTagName('form')[0];
+        const email = document.getElementById('mail');
+
+        let error = email;
+        while ((error = error.nextSibling).nodeType != 1);
+
+        const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+
+        function addEvent(element, event, callback) {
+            let previousEventCallBack = element["on" + event];
+            element["on" + event] = function (e) {
+                const output = callback(e);
+
+
+                if (output === false) return false;
+
+                if (typeof previousEventCallBack === 'function') {
+                    output = previousEventCallBack(e);
+                    if (output === false) return false;
+                }
+            }
+        };
+
+
+        addEvent(window, "load", function () {
+
+            const test = email.value.length === 0 || emailRegExp.test(email.value);
+
+            email.className = test ? "valid" : "invalid";
+        });
+
+
+        addEvent(email, "input", function () {
+            const test = email.value.length === 0 || emailRegExp.test(email.value);
+            if (test) {
+                email.className = "valid";
+                error.innerHTML = "";
+                error.className = "error";
+            } else {
+                email.className = "invalid";
+            }
+        });
+
+        addEvent(form, "submit", function () {
+            const test = email.value.length === 0 || emailRegExp.test(email.value);
+
+            if (!test) {
+                email.className = "invalid";
+                error.innerHTML = "Ups! Introduce El Email!";
+                error.className = "error active";
+
+                return false;
+            } else {
+                email.className = "valid";
+                error.innerHTML = "";
+                error.className = "error";
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: darkviolet;
+}
+section{
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+}
+
+.Formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.FormPrin{
+    transition: box-shadow 0.3s ease;
+    font-size: 20px;
+    font-family: tahoma;
+    display: flex;
+    margin: 35px;
+    width: 200px;
+    padding: 25px;
+    border: solid black 1px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 139, 0.623);
+    color: white;
+
+}
+
+.FormPrin:hover{
+    box-shadow: 0 0 1rem 0.1rem rgb(73, 18, 73)
+
+}
+
+.mt-1{
+    margin-top: 10px;
+}
+
+.mt-3{
+    transition: color 0.3s ease;
+    transition: box-shadow 0.3s ease;
+    border: solid blue 1px;
+    padding: 5px;
+    width: 200px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.mt-3:hover{
+    color: blueviolet;
+    box-shadow: 0 0 1rem 0.1rem darkorchid;
+
+}
+
+#mail{
+    width: 200px;
+    color: rgb(102, 0, 153);
+    padding: 2px;
+}
+
+.error{
+    font-size: 15px;
+    color: red;
+}
+
+.mt-2{
+    width: 200px;
+    color: rgb(100, 0, 150);
+    padding: 2px;
+}
